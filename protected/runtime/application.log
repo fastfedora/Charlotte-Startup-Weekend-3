@@ -1,0 +1,77 @@
+2011/10/15 00:46:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:47:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:49:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('')
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:49:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('')
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:49:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('')
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:50:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('')
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:52:26 [error] [php] Invalid argument supplied for foreach() (/home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:186)
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): DefaultController->run()
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php (13)
+2011/10/15 00:53:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('')
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii')
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii
+2011/10/15 00:56:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/gii/CCodeGenerator.php:87
+Stack trace:
+#0 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionCode()
+#1 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#2 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#3 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(277): CController->run('code')
+#5 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/web/CWebApplication.php(136): CWebApplication->runController('gii/model/code')
+#6 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#7 /home2/fastfedo/public_html/sponsorbar/yii-1.1.8.r3324/sponsorbar/index.php(13): CApplication->run()
+#8 {main} REQUEST_URI=/yii/sponsorbar/index.php?r=gii/model/code&id=0

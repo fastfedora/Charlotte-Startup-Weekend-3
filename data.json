@@ -1,0 +1,81 @@
+﻿{
+  "title":{
+    "text":  "For Year 2011",
+    "style": "{font-size: 20px; color:#0000ff; font-family: Verdana; text-align: center;}"
+  },
+ 
+  "y_legend":{
+    "text": "Open Flash Chart",
+    "style": "{color: #000000; font-size: 12px;}"
+  },
+ 
+  "elements":[
+    {
+      "type":      "line",
+      "alpha":     0.5,
+      "colour":    "#9F79EE",
+      "text":      "Unique Visitors",
+      "font-size": 10,
+      "values" :   [9,6,7,9,5,7,6,9,7]
+    },
+    
+    {
+      "type":      "line",
+      "alpha":     0.5,
+      "colour":    "#EE4000",
+      "text":      "Repeat Visitors",
+      "font-size": 10,
+      "values" :   [6,7,9,5,7,6,9,7,3]
+    },
+    
+    {
+      "type":      "bar",
+      "alpha":     0.5,
+      "colour":    "#9E0508",
+      "text":      "Conversion",
+      "font-size": 10,
+      "values" :   [1,5,8,5,9,8,9,7,10]
+    }
+    
+    ,
+    
+    {
+      "type":      "bar",
+      "alpha":     0.5,
+      "colour":    "#5B59BA",
+      "text":      "Microsoft",
+      "font-size": 10,
+      "values" :   [1,4,9,4,10,7,10,6,9]
+    }
+    ,
+    
+    {
+      "type":      "bar",
+      "alpha":     0.5,
+      "colour":    "#5C246E",
+      "text":      "Apple",
+      "font-size": 10,
+      "values" :   [2,2,3,2,4,3,1,7,6]
+    }
+
+  ],
+ 
+  "x_axis":{
+    "stroke":1,
+    "tick_height":10,
+    "colour":"#000000",
+    "grid_colour":"#000000",
+    "labels": {
+        "labels": ["January","February","March","April","May","June","July","August","Spetember"]
+    }
+   },
+ 
+  "y_axis":{
+    "stroke":      1,
+    "tick_length": 3,
+    "colour":      "#000000",
+    "grid_colour": "#000000",
+    "offset":      1,
+    "max":         100
+  }
+}
