@@ -1,0 +1,142 @@
+<?php
+class ClientController extends Controller
+{
+	public function actionIndex()
+	{
+		$model = new ClientUser;
+        
+		if(isset($_POST['ClientUser']))
+		{
+            $model->attributes=$_POST['ClientUser'];
+            $model->create_time = date("Y-m-d H:i:s");
+            $model->auth_code = $this->createAuthenticationCode();
+            
+			if($model->save())
+            {
+                $this->sendAuthenticationCode($model->auth_code, $model->phone);
+                
+                $this->redirect(array('client/verify','id'=>$model->id));
+            }
+        }
+        
+		$this->render('index',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=$this->loadModel($id);
+
+		if(isset($_POST['ClientUser']))
+		{
+            $verify = new ClientUser;
+            $verify->attributes=$_POST['ClientUser'];
+        
+            if ($model->auth_code == $verify->auth_code)
+                $this->redirect(array('client/verified'));
+                
+            $model->auth_code = $verify->auth_code;
+        }
+        else
+        {
+            $model->auth_code = '';
+        }
+        
+		$this->render('verify',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionVerified()
+	{
+		$this->render('verified');
+	}
+    
+	// Uncomment the following methods and override them if needed
+	/*
+	public function filters()
+	{
+		// return the filter configuration for this controller, e.g.:
+		return array(
+			'inlineFilterName',
+			array(
+				'class'=>'path.to.FilterClass',
+				'propertyName'=>'propertyValue',
+			),
+		);
+	}
+
+	public function actions()
+	{
+		// return external action classes, e.g.:
+		return array(
+			'action1'=>'path.to.ActionClass',
+			'action2'=>array(
+				'class'=>'path.to.AnotherActionClass',
+				'propertyName'=>'propertyValue',
+			),
+		);
+	}
+	*/
+    
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadModel($id)
+	{
+		$model=ClientUser::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+    /**
+     * Copied from the answer to a question on a discussion forum at:
+     * http://www.yiiframework.com/forum/index.php?/topic/6981-random-password-generate/
+     */
+    private function createAuthenticationCode()
+    {
+        $length = 6;
+        $chars = array_merge(range(0,9), range('A','Z'));
+        shuffle($chars);
+        
+        return implode(array_slice($chars, 0, $length));    
+    }
+    
+    /**
+     * Sends the given authentication code to the given number.
+     */
+    private function sendAuthenticationCode($code, $phone)
+    {
+        $sid = "AC1044c50446754788bf95b8586e1026ec"; // Your Twilio account sid
+        $token = "1a47bc09d3ed4fb457ddf4c08e61bcd0"; // Your Twilio auth token
+
+        spl_autoload_unregister(array('YiiBase','autoload'));
+        require('Services/Twilio.php'); 
+       
+        $client = new Services_Twilio($sid, $token);
+
+        try
+        {
+            $sms = $client->account->sms_messages->create(
+                "4155992671",
+                $phone,
+                "Access Code: " . $code
+            );
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+/*        
+        $message = $client->account->sms_messages->create(
+          '14155992671', // From this number
+          phone, // Text this number
+          "Access Code: " . code
+        );
+*/
+        
+        spl_autoload_register(array('YiiBase','autoload'));
+    }
+}
