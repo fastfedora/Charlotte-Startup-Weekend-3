@@ -10,6 +10,8 @@ class ClientController extends Controller
         
 		if(isset($_POST['ClientUser']))
 		{
+            date_default_timezone_set("America/New_York");
+            
             $model->attributes=$_POST['ClientUser'];
             $model->create_time = date("Y-m-d H:i:s");
             $model->auth_code = $this->createAuthenticationCode();
