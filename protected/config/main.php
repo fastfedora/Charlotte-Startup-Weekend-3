@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'CSW WiFi',
-    'theme'=>'tutorialzine1',
+    'theme'=>'wificrowd',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

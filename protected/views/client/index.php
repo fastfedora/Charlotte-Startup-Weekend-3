@@ -9,10 +9,12 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+    <input type="hidden" name="username" value="<?php echo isset($_GET["username"]) ? $_GET["username"] : ''; ?>" />
+    <input type="hidden" name="redirurl" value="<?php echo isset($_GET["redirurl"]) ? $_GET["redirurl"] : ''; ?>" />
+    
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'phone'); ?>
 		<?php echo $form->textField($model,'phone',array('size'=>20,'maxlength'=>40)); ?>
 		<?php echo $form->error($model,'phone'); ?>
 	</div>

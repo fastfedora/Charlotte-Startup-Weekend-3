@@ -1,26 +1,34 @@
 <?php
 class ClientController extends Controller
 {
-	public function actionIndex()
+	public $layout='//layouts/portal';
+
+	public function actionIndex($portal_id)
 	{
-		$model = new ClientUser;
+		$model  = new ClientUser;
+        $portal = Portal::model()->findByPk($portal_id);
         
 		if(isset($_POST['ClientUser']))
 		{
             $model->attributes=$_POST['ClientUser'];
             $model->create_time = date("Y-m-d H:i:s");
             $model->auth_code = $this->createAuthenticationCode();
+            $model->mac_address = $_REQUEST['username'];
+            $model->redirurl = $_REQUEST['redirurl'];
             
 			if($model->save())
             {
-                $this->sendAuthenticationCode($model->auth_code, $model->phone);
+                $message = $portal->auth_message != null ? $portal->auth_message : "My Access code: {code}";
+                $message = str_replace("{code}", $model->auth_code, $message);
+                $this->sendAuthenticationCode($message, $model->phone);
                 
-                $this->redirect(array('client/verify','id'=>$model->id));
+                $this->redirect(array('client/verify','id'=>$model->id, 'portal_id'=>$portal_id));
             }
         }
         
 		$this->render('index',array(
 			'model'=>$model,
+            'portal'=>$portal
 		));
 	}
 
@@ -34,7 +42,7 @@ class ClientController extends Controller
             $verify->attributes=$_POST['ClientUser'];
         
             if ($model->auth_code == $verify->auth_code)
-                $this->redirect(array('client/verified'));
+                $this->redirect(array('client/verified', 'portal_id'=>$_GET['portal_id']));
                 
             $model->auth_code = $verify->auth_code;
         }
@@ -109,7 +117,7 @@ class ClientController extends Controller
     /**
      * Sends the given authentication code to the given number.
      */
-    private function sendAuthenticationCode($code, $phone)
+    private function sendAuthenticationCode($message, $phone)
     {
         $sid = "AC1044c50446754788bf95b8586e1026ec"; // Your Twilio account sid
         $token = "1a47bc09d3ed4fb457ddf4c08e61bcd0"; // Your Twilio auth token
@@ -124,7 +132,7 @@ class ClientController extends Controller
             $sms = $client->account->sms_messages->create(
                 "4155992671",
                 $phone,
-                "Access Code: " . $code
+                $message
             );
         } catch (Exception $e) {
             echo 'Error: ' . $e->getMessage();
