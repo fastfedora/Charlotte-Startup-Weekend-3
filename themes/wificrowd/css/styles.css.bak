@@ -1,0 +1,344 @@
+*{
+	/* Universal reset: */
+	margin:0;
+	padding:0;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+header,footer,
+article,section,
+hgroup,
+figure{
+	/* Giving a display value to the HTML5 rendered elements: */
+	display:block;
+}
+
+body{
+	/* Setting the default text color, size, page background and a font stack: */
+	font-size:0.825em;
+	color:#000;
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+input {
+    border: solid #bbb 1px;
+    font-size: 14pt;
+    padding: 4px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+}
+
+/* Hyperlink Styles: */
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}
+
+/* Headings: */
+
+h1,h2,h3{
+	font-family:Arial,Helvetica,Sans-Serif;
+}
+
+h1{
+	/* The logo text */
+	font-size:1.5em;
+	padding:0.5em 0 0;
+}
+
+article h1
+{
+	font-size:1.8em;
+	font-weight:normal;
+	letter-spacing:0.01em;
+    padding-bottom: 15px;
+}
+
+h3{
+	/* The slogan text */
+	font-size:2em;
+	font-weight:normal;
+	margin:0 0 1em;
+    padding-top:10px;
+}
+
+
+h2{
+	font-size:2.2em;
+	font-weight:normal;
+	letter-spacing:0.01em;
+}
+
+p{
+	line-height:1.5em;
+	padding-bottom:1em;
+}
+
+.line{
+	/* The dividing line: */
+	height:1px;
+	background-color:#24404c;
+	border-bottom:1px solid #416371;
+	margin:1em 0;
+	overflow:hidden;
+}
+
+article .line{
+	/* The dividing line inside of the article is darker: */
+	background-color:#E7DF81;
+	margin:1.3em 0;
+}
+
+footer .line{
+	margin:2em 0;
+}
+
+nav{
+	padding:0 5px;
+	position:absolute;
+	right: 20px;
+	top: 0px;
+}
+
+/* The clearfix hack to clear the floats: */
+
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* The navigation styling: */
+
+nav ul li{
+	display:inline;
+}
+
+nav ul li a,
+nav ul li a:visited{
+	color:#565656;
+	display:block;
+	float:left;
+	font-size:1.25em;
+	font-weight:bold;
+	margin:5px 2px;
+	padding:7px 10px 4px;
+	text-shadow:0 1px 1px white;
+	text-transform:uppercase;
+}
+
+nav ul li a:hover{
+	text-decoration:none;
+	background-color:#f0f0f0;
+}
+
+nav, nav ul li a,figure{
+	/* Applying CSS3 rounded corners: */
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Article styles: */
+
+#page{
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+article{
+    background: url(../img/bg-grad-grey-to-white.original.png);
+    background-repeat: repeat-x;
+	padding:20px 40px 20px 40px;
+	border-top:1px solid #bbb;
+}
+
+figure{
+	border:3px solid #142830;
+	float:right;
+	height:300px;
+	margin-left:15px;
+	overflow:hidden;
+	width:500px;
+}
+
+figure:hover{
+	-moz-box-shadow:0 0 2px #4D7788;
+	-webkit-box-shadow:0 0 2px #4D7788;
+	box-shadow:0 0 2px #4D7788;
+}
+
+figure img{
+	margin-left:-60px;
+}
+
+/* Footer styling: */
+
+footer{
+	margin-bottom:30px;
+	text-align:center;
+	font-size:0.825em;
+}
+
+
+footer p{
+	margin-bottom:-2.5em;
+	position:relative;
+}
+
+footer a,footer a:visited{
+	color:#cccccc;
+	background-color:#213e4a;
+	display:block;
+	padding:2px 4px;
+	z-index:100;
+	position:relative;
+}
+
+footer a:hover{
+	text-decoration:none;
+	background-color:#142830;
+}
+
+footer a.by{
+	float:left;
+
+}
+
+footer a.up{
+	float:right;
+}
+
+#toolbar {
+    list-style: none; 
+    display: inline-block;
+    float: right;
+}
+
+#toolbar li {
+    display: inline;
+}
+
+#toolbar li:after {
+	content: " | ";
+}	
+
+#toolbar li.lastItem:after {
+	content: " ";
+}
+
+#content {
+    padding-top: 20px;
+    height: 100%;
+}
+
+img.sponsor {
+    padding: 10px;
+}
+
+#welcome {
+    font-size: 24pt;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #00c;
+}
+
+body.portal {
+    background: url(../img/bg_portal.jpg);
+}
+
+.portalBox {
+    margin: 100px auto 20px;
+    width: 400px;
+    background-color: #fff;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+    border: solid black 1px;
+}
+
+.portal .title {
+    background-color: #F46C22;
+    padding: 10px;
+    color: #000;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid black 1px;
+	-moz-border-radius-topleft:8px;
+	-moz-border-radius-topright:8px;
+	-webkit-border-top-left-radius:8px;
+	-webkit-border-top-right-radius:8px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+}
+
+.portalContent {
+    padding: 20px;
+    text-align: center;
+}
+
+.portalContent p {
+    text-align: left;
+}
+
+.portalContent h1 {
+    text-align: center;
+    font-size: 14pt;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 8px;
+}
+
+.portalContent input {
+    border: solid #666 1px;
+    font-size: 14pt;
+    padding: 4px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+}
+
+.portalSponsors {
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.logoBar {
+    background-color: #fff;
+    border-bottom: solid black 1px;
+    
+}
+
+#logo {
+    display: block;
+    padding: 5px 5px 5px 5px;
+    height: 30px;
+}
+
